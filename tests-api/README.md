@@ -4,7 +4,7 @@ Testes de contrato e fluxo contra a API pública [serverest.dev](https://servere
 
 ## Pré-requisitos
 
-- Node.js 20 ou superior.
+- Node.js 22 (versão usada no CI; mínimo 20, exigido pelo Playwright).
 
 ## Execução
 
