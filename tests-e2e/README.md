@@ -4,7 +4,7 @@ Testes de login e navegação até o formulário de checkout do [SauceDemo](http
 
 ## Pré-requisitos
 
-- Node.js 20 ou superior.
+- Node.js 22 (versão usada no CI; mínimo 20, exigido pelo Playwright).
 
 ## Execução
 
