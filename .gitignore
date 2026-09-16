@@ -1,2 +1,6 @@
 # Arquivos de configuração e resultados de teste de carga
 .env
+
+node_modules/
+playwright-report/
+test-results/
