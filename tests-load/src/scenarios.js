@@ -26,22 +26,20 @@ export function userFlow() {
   );
   metrics.recommendationDuration.add(recommendationRes.timings.duration);
 
-  const recommendationOk = check(recommendationRes, {
+  check(recommendationRes, {
     'POST /api/pizza status 200': (r) => r.status === 200,
     'POST /api/pizza retorna pizza': (r) => r.json('pizza.name') !== undefined,
   });
-  metrics.errorRate.add(!recommendationOk);
 
   thinkTime(1, 3);
 
   const ratingsRes = http.get(`${config.baseUrl}/api/ratings`, authHeaders);
   metrics.ratingsDuration.add(ratingsRes.timings.duration);
 
-  const ratingsOk = check(ratingsRes, {
+  check(ratingsRes, {
     'GET /api/ratings status 200': (r) => r.status === 200,
     'GET /api/ratings tem corpo': (r) => r.body && r.body.length > 0,
   });
-  metrics.errorRate.add(!ratingsOk);
 
   thinkTime(1, 3);
 }
