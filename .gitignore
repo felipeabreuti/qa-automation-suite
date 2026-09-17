@@ -1,6 +1,14 @@
 # Arquivos de configuração e resultados de teste de carga
 .env
 
+# Node.js artifacts and caches
 node_modules/
 playwright-report/
 test-results/
+
+# Mobile (Appium/Python) artifacts and caches
+tests-app/.venv/
+tests-app/report/
+tests-app/app/
+.pytest_cache/
+__pycache__/
